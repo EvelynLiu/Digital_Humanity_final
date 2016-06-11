@@ -356,43 +356,112 @@
       	</div>
     </nav>
 
-    <!-- Left board -->
-    <div class="container-fluid">
-    	<div class="row">
-	        <div class="col-sm-2 col-md-2 sidebar">
-	        	<h4>春秋</h4>
-	        	<ul class="nav nav-sidebar">
-	            	<li><a href="#">...</a></li>
-	            	<li><a href="#">...</a></li>
-	            	<li><a href="#">...</a></li>
-	          	</ul>
-	        </div>
-	    </div>
-    </div>
-
-    <!-- Right board -->
-    <div class="container-fluid">
-    	<div class="row">
-	        <div class="col-sm-2 col-md-2 checklist">
-	        	<h4>請勾選欲顯示書目</h4>
-	        	<div class="checkbox">
-  					<label><input type="checkbox" value="">左傳</label>
-				</div>
-				<div class="checkbox">
-  					<label><input type="checkbox" value="">公羊傳</label>
-				</div>
-				<div class="checkbox">
-  					<label><input type="checkbox" value="">穀梁傳</label>
-				</div>
-				<div class="checkbox">
-  					<label><input type="checkbox" value="">春秋經解</label>
-				</div>
-	        </div>
-	    </div>
-    </div>
-
     <!-- Main board -->
+    <div class="container-fluid">
+    	<div class="row">
+    		<div id="main">
+    			<!--五個頁面全開-->
+    			<!--<div class="col-sm-2 content">
+				    <h1 class="page-header">春秋</h1>
+				    <ul class="nav nav-sidebar">
+				        <li><a href="#">...</a></li>
+				        <li><a href="#">...</a></li>
+				        <li><a href="#">...</a></li>
+				    </ul>
+				</div>
+				<div class="col-sm-2 content">
+				    <h1 class="page-header">左傳</h1>
+				    <ul class="nav nav-sidebar">
+				        <li><a href="#">...</a></li>
+				        <li><a href="#">...</a></li>
+				        <li><a href="#">...</a></li>
+				    </ul>
+				</div>
+				<div class="col-sm-2 content">
+				    <h1 class="page-header">公羊傳</h1>
+				    <ul class="nav nav-sidebar">
+				        <li><a href="#">...</a></li>
+				        <li><a href="#">...</a></li>
+				        <li><a href="#">...</a></li>
+				    </ul>
+				</div>
+				<div class="col-sm-2 content">
+				    <h1 class="page-header">穀梁傳</h1>
+				    <ul class="nav nav-sidebar">
+				        <li><a href="#">...</a></li>
+				        <li><a href="#">...</a></li>
+				        <li><a href="#">...</a></li>
+				    </ul>
+				</div>
+				<div class="col-sm-2 content">
+				    <h1 class="page-header">春秋經解</h1>
+				    <ul class="nav nav-sidebar">
+				        <li><a href="#">...</a></li>
+				        <li><a href="#">...</a></li>
+				        <li><a href="#">...</a></li>
+				    </ul>
+				</div>-->
+				        	
+				<!-- 非全選 -->        
+	    		<div class="col-sm-10 col-md-10">
+	    			<div class="row">
+				        <div class="col-sm-3 content">
+				        	<h1 class="page-header">春秋</h1>
+				        	<ul class="nav nav-sidebar">
+				            	<li><a href="#">...</a></li>
+				            	<li><a href="#">...</a></li>
+				            	<li><a href="#">...</a></li>
+				          	</ul>
+				        </div>
+				        <!-- Other books -->
+				        <div class="col-sm-3 content">
+				        	<h1 class="page-header">左傳</h1>
+				        	<ul class="nav nav-sidebar">
+				            	<li><a href="#">...</a></li>
+				            	<li><a href="#">...</a></li>
+				            	<li><a href="#">...</a></li>
+				          	</ul>
+				        </div>
+				        <div class="col-sm-3 content">
+				        	<h1 class="page-header">公羊傳</h1>
+				        	<ul class="nav nav-sidebar">
+				            	<li><a href="#">...</a></li>
+				            	<li><a href="#">...</a></li>
+				            	<li><a href="#">...</a></li>
+				          	</ul>
+				        </div>
+				        <div class="col-sm-3 content">
+				        	<h1 class="page-header">穀梁傳</h1>
+				        	<ul class="nav nav-sidebar">
+				            	<li><a href="#">...</a></li>
+				            	<li><a href="#">...</a></li>
+				            	<li><a href="#">...</a></li>
+				          	</ul>
+				        </div>
+				    </div>
+			    </div>
+			</div>
 
-
-
+			<!-- Right board -->
+			<div class="col-sm-2 col-md-2 checklist">
+	        	<h4>請勾選欲顯示書目</h4>
+	        	<div id="books">
+		        	<div class="checkbox">
+	  					<label><input type="checkbox" value="左傳">左傳</label>
+					</div>
+					<div class="checkbox">
+	  					<label><input type="checkbox" value="公羊傳">公羊傳</label>
+					</div>
+					<div class="checkbox">
+	  					<label><input type="checkbox" value="穀梁傳">穀梁傳</label>
+					</div>
+					<div class="checkbox">
+	  					<label><input type="checkbox" value="春秋經解">春秋經解</label>
+					</div>
+				</div>
+				<button onclick="show()">Submit</button>
+	        </div>		    
+	    </div>
+    </div>
 </body>
+<script type="text/javascript" src="js/content.js"></script>
