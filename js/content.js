@@ -1,4 +1,20 @@
-function show() {
+$(document).on('click', '.dropdown-toggle', function () {
+    //console.log("Selected Option:"+$(this).text());
+    var el = document.getElementById('age');
+    var h = el.getElementsByTagName("h4");
+    var old = "年號：";
+    h[0].innerHTML = old + $(this).text();
+});
+
+$(document).on('click', '.dropdown-menu li a', function () {
+    //console.log("Selected Option:"+$(this).text());
+    var el = document.getElementById('age');
+    var h = el.getElementsByTagName("h4");
+    var old = h[0].innerHTML;
+    h[0].innerHTML = old + $(this).text();
+});
+
+function show_page() {
 	var el = document.getElementById('books');
 	var input = el.getElementsByTagName('input');
 	var count = 0;

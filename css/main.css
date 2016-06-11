@@ -18,6 +18,10 @@
     border-color: #dd0;
 }
 
+#age {
+    color: #00ccff; 
+}
+
 .checklist {
     position: fixed;
     top: 51px;
