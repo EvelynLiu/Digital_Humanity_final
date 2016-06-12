@@ -32,7 +32,10 @@ function show_page() {
         }
     }
     console.log(count);
-    if (count === 1){      //col-sm-6 * 2
+    if (count === 0){ //only春秋
+    	main.innerHTML = "<div class=\"col-sm-10 col-md-10 content\"><div class=\"row\"><div class=\"col-sm-12 content\"><h1 class=\"page-header\">春秋</h1><ul class=\"nav nav-sidebar\"><li><a href=\"#\">...</a></li><li><a href=\"#\">...</a></li><li><a href=\"#\">...</a></li></ul></div></div></div>";
+    }
+    else if (count === 1){ //col-sm-6 * 2
     	main.innerHTML = "<div class=\"col-sm-10 col-md-10\"><div class=\"row\"><div class=\"col-sm-6 content\"><h1 class=\"page-header\">春秋</h1><ul class=\"nav nav-sidebar\"><li><a href=\"#\">...</a></li><li><a href=\"#\">...</a></li><li><a href=\"#\">...</a></li></ul></div><div class=\"col-sm-6 content\"><h1 class=\"page-header\">"+checked[0]+"</h1><ul class=\"nav nav-sidebar\"><li><a href=\"#\">...</a></li><li><a href=\"#\">...</a></li><li><a href=\"#\">...</a></li></ul></div></div></div>";
     }
     else if (count === 2){ //col-sm-4 * 3
