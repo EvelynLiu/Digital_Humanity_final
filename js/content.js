@@ -3,15 +3,16 @@ $(document).on('click', '.dropdown-toggle', function () {
     var el = document.getElementById('age');
     var h = el.getElementsByTagName("h4");
     var old = "年號：";
-    h[0].innerHTML = old + $(this).text();
+    h[1].innerHTML = old + $(this).text();
 });
 
 $(document).on('click', '.dropdown-menu li a', function () {
     //console.log("Selected Option:"+$(this).text());
     var el = document.getElementById('age');
     var h = el.getElementsByTagName("h4");
-    var old = h[0].innerHTML;
-    h[0].innerHTML = old + $(this).text();
+    var old = h[1].innerHTML;
+    h[1].innerHTML = old + $(this).text();
+    h[0].innerHTML = h[1].innerHTML;
 });
 
 function show_page() {
