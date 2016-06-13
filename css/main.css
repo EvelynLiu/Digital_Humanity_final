@@ -23,15 +23,18 @@
 }
 
 .checklist {
-    position: fixed;
-    top: 51px;
+    position: relative;
+    top: -60px;
     bottom: 0;
     right: 0;
-    z-index: 1000;
+    /*z-index: 1000;*/
     display: block;
     padding: 20px;
     overflow-x: hidden;
     overflow-y: auto;
     background-color: #f5f5f5;
     border-left: 1px solid #eee;
+    padding-bottom: 1000px;
+    margin-bottom: -1000px;
+    height: 100%;
 }
