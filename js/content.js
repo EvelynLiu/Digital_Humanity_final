@@ -36,16 +36,16 @@ function show_page() {
     if (count === 0){ //only春秋
     	main.innerHTML = "<div class=\"col-sm-10 col-md-10 content\"><div class=\"row\"><div class=\"col-sm-12 content\"><h1 class=\"page-header\">春秋</h1><ul class=\"nav nav-sidebar\"><li><a href=\"#\">...</a></li><li><a href=\"#\">...</a></li><li><a href=\"#\">...</a></li></ul></div></div></div>";
     }
-    else if (count === 1){ //col-sm-6 * 2
+    else if (count === 1){ //col-sm-6 * 2 => checked[0]
     	main.innerHTML = "<div class=\"col-sm-10 col-md-10\"><div class=\"row\"><div class=\"col-sm-6 content\"><h1 class=\"page-header\">春秋</h1><ul class=\"nav nav-sidebar\"><li><a href=\"#\">...</a></li><li><a href=\"#\">...</a></li><li><a href=\"#\">...</a></li></ul></div><div class=\"col-sm-6 content\"><h1 class=\"page-header\">"+checked[0]+"</h1><ul class=\"nav nav-sidebar\"><li><a href=\"#\">...</a></li><li><a href=\"#\">...</a></li><li><a href=\"#\">...</a></li></ul></div></div></div>";
     }
-    else if (count === 2){ //col-sm-4 * 3
+    else if (count === 2){ //col-sm-4 * 3 => checked[0][1]
     	main.innerHTML = "<div class=\"col-sm-10 col-md-10\"><div class=\"row\"><div class=\"col-sm-4 content\"><h1 class=\"page-header\">春秋</h1><ul class=\"nav nav-sidebar\"><li><a href=\"#\">...</a></li><li><a href=\"#\">...</a></li><li><a href=\"#\">...</a></li></ul></div><div class=\"col-sm-4 content\"><h1 class=\"page-header\">"+checked[0]+"</h1><ul class=\"nav nav-sidebar\"><li><a href=\"#\">...</a></li><li><a href=\"#\">...</a></li><li><a href=\"#\">...</a></li></ul></div><div class=\"col-sm-4 content\"><h1 class=\"page-header\">"+checked[1]+"</h1><ul class=\"nav nav-sidebar\"><li><a href=\"#\">...</a></li><li><a href=\"#\">...</a></li><li><a href=\"#\">...</a></li></ul></div></div></div>";
     }
-    else if (count === 3){ //col-sm-3 * 4
+    else if (count === 3){ //col-sm-3 * 4 => checked[0][1][2]
     	main.innerHTML = "<div class=\"col-sm-10 col-md-10\"><div class=\"row\"><div class=\"col-sm-3 content\"><h1 class=\"page-header\">春秋</h1><ul class=\"nav nav-sidebar\"><li><a href=\"#\">...</a></li><li><a href=\"#\">...</a></li><li><a href=\"#\">...</a></li></ul></div><div class=\"col-sm-3 content\"><h1 class=\"page-header\">"+checked[0]+"</h1><ul class=\"nav nav-sidebar\"><li><a href=\"#\">...</a></li><li><a href=\"#\">...</a></li><li><a href=\"#\">...</a></li></ul></div><div class=\"col-sm-3 content\"><h1 class=\"page-header\">"+checked[1]+"</h1><ul class=\"nav nav-sidebar\"><li><a href=\"#\">...</a></li><li><a href=\"#\">...</a></li><li><a href=\"#\">...</a></li></ul></div><div class=\"col-sm-3 content\"><h1 class=\"page-header\">"+checked[2]+"</h1><ul class=\"nav nav-sidebar\"><li><a href=\"#\">...</a></li><li><a href=\"#\">...</a></li><li><a href=\"#\">...</a></li></ul></div></div></div>";
     }
-    else if (count === 4){ //col-sm-2 * 5
+    else if (count === 4){ //col-sm-2 * 5 => checked[0][1][2]
     	main.innerHTML = "<div class=\"col-sm-2 content\"><h1 class=\"page-header\">春秋</h1><ul class=\"nav nav-sidebar\"><li><a href=\"#\">...</a></li><li><a href=\"#\">...</a></li><li><a href=\"#\">...</a></li></ul></div><div class=\"col-sm-2 content\"><h1 class=\"page-header\">左傳</h1><ul class=\"nav nav-sidebar\"><li><a href=\"#\">...</a></li><li><a href=\"#\">...</a></li><li><a href=\"#\">...</a></li></ul></div><div class=\"col-sm-2 content\"><h1 class=\"page-header\">公羊傳</h1><ul class=\"nav nav-sidebar\"><li><a href=\"#\">...</a></li><li><a href=\"#\">...</a></li><li><a href=\"#\">...</a></li></ul></div><div class=\"col-sm-2 content\"><h1 class=\"page-header\">穀梁傳</h1><ul class=\"nav nav-sidebar\"><li><a href=\"#\">...</a></li><li><a href=\"#\">...</a></li><li><a href=\"#\">...</a></li></ul></div><div class=\"col-sm-2 content\"><h1 class=\"page-header\">春秋經解</h1><ul class=\"nav nav-sidebar\"><li><a href=\"#\">...</a></li><li><a href=\"#\">...</a></li><li><a href=\"#\">...</a></li></ul></div>";
     }
 }
