@@ -1,5 +1,5 @@
 <?php
-	$data = $db -> query_book(5);
+	$data = $query[1];
 	$title = "";
 	$content = "";
 	// print_r($data);
@@ -17,7 +17,7 @@
 			$classYear.=" ".substr($start, 0,5).$temp;
 		}
 		if($item['TITLE'] == $title) {
-			$content.="<li><a href=\"#$classYear\" class=\"text".$classYear."\" id=\"".$start."\">".$data[$i]['CONTENT']."</a></li>";		
+			$content.="<li><a href=\"#\" class=\"text".$classYear."\" id=\"".$start."\">".$data[$i]['CONTENT']."</a></li>";		
 		} else {
 			if( $title != "") {
 				echo "<div class='block $title' name='$title'>";
@@ -29,7 +29,7 @@
 			$content = "";
 			
 			$title = $data[$i]['TITLE'];
-			$content.="<li><a href=\"#$classYear\" class=\"text".$classYear."\" id=\"".$start."\">".$data[$i]['CONTENT']."</a></li>";
+			$content.="<li><a href=\"\" class=\"text".$classYear."\" id=\"".$start."\">".$data[$i]['CONTENT']."</a></li>";
 			
 		}
 	}

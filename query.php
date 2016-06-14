@@ -3,6 +3,11 @@
 <?php 
 	include('dbManager.php');
 	$db = new dbManager; 
+	$query[1] = $db->search_TITLEandCONTENT($_GET['query'],1);
+	$query[2] = $db->search_TITLEandCONTENT($_GET['query'],2);
+	$query[3] = $db->search_TITLEandCONTENT($_GET['query'],3);
+	$query[4] = $db->search_TITLEandCONTENT($_GET['query'],4);
+	// $query[5] = $db->search_TITLEandCONTENT($_GET['query'],5);
 ?>
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -31,7 +36,6 @@
 
 <script type="text/javascript">
 $( document ).ready(function() {
-	//--	dropdown bar action listener
 	var window_gap = $($(".nav-sidebar")[0]).offset().top;
 	
 	var text = $('.dropdown');
@@ -62,53 +66,7 @@ $( document ).ready(function() {
 		}
 	}
 				
-	//--	index action listener
-
-	for(var i = 0; i < $('.nav-sidebar').length; i ++) {
-		for(var j = 1; j < $('.nav-sidebar')[i].childNodes.length; j ++) {
-			for(var k = 1; k < $('.nav-sidebar')[i].childNodes[j].childNodes.length - 1; k ++) {
 				
-				$( $('.nav-sidebar')[i].childNodes[j].childNodes[k].firstElementChild ).click(function() {
-					
-					try {
-						$($(".nav-sidebar")[0]).animate({
-							scrollTop: $( $(".nav-sidebar")[0] ).scrollTop() + ( $( $( $('.' + this.hash.replace("# ", "").split(" ")[0]     )[0] )[0] ).offset().top - window_gap )
-						}, 600);
-					}catch(err) {
-						console.log("0 : " + err);
-					}
-					
-					try {
-						$($(".nav-sidebar")[1]).animate({
-							scrollTop:  $( $(".nav-sidebar")[1] ).scrollTop() + ( $( $('.' + this.hash.replace("# ", "").split(" ")[0]     )[1] ).offset().top - window_gap )
-						}, 600);
-					}catch(err) {
-						console.log("1 : " + err);
-					}
-					
-					try {
-						$($(".nav-sidebar")[2]).animate({
-							scrollTop:  $( $(".nav-sidebar")[2] ).scrollTop() + ( $( $('.' + this.hash.replace("# ", "").split(" ")[0]     )[2] ).offset().top - window_gap )
-						}, 600);
-					}catch(err) {
-						
-					}
-					
-					try {
-						$($(".nav-sidebar")[3]).animate({
-							scrollTop:  $( $(".nav-sidebar")[3] ).scrollTop() + ( $( $('.' + this.hash.replace("# ", "").split(" ")[0]     )[3] ).offset().top - window_gap )
-						}, 600);
-					}catch(err) {
-						
-					}
-				});
-			}
-			
-		}
-		
-	}
-
-	
 	});
 </script>
 
@@ -117,7 +75,7 @@ $( document ).ready(function() {
     <nav class="navbar navbar-default navbar-static-top">
     	<div class="container-fluid">
         	<div class="navbar-header">
-          		<a class="navbar-brand" href="#">春秋對讀系統</a>
+          		<a class="navbar-brand" href="index.php">春秋對讀系統</a>
         	</div>
         	<div id="navbar" class="navbar-collapse collapse">
          		<ul class="nav navbar-nav">
@@ -438,11 +396,9 @@ $( document ).ready(function() {
             	</li>
           		</ul>
           		<ul class="nav navbar-nav navbar-right"></ul>
-				
           		<form class="navbar-form navbar-right" action="query.php" method="GET">
             		<input type="text" name="query" class="form-control" placeholder="搜尋...">
           		</form>
-				
         	</div>
       	</div>
     </nav>
@@ -463,37 +419,29 @@ $( document ).ready(function() {
 					    <div class="book col-sm-12 content">
 							<h1 class="page-header">春秋</h1>
 							<ul class="nav nav-sidebar" style="width:100%px;height:550px;overflow-x:auto;overflow-y:auto;">
-							    <?php include('import/chunqiu.php');?>
+							    <?php include('import/queryChunqiu.php');?>
 							</ul>
 						</div>
-						
 						<div class="book col-sm-5 content hidden">
 							<h1 class="page-header">左傳</h1>
 							<ul class="nav nav-sidebar" style="width:100%px;height:550px;overflow-x:auto;overflow-y:auto;">
-							    <?php include('import/zuozhuan.php');?>
+							    <?php include('import/queryzuozhuan.php');?>
 							</ul>
 						</div>
 						
 						<div class="book col-sm-5 content hidden">
 							<h1 class="page-header">公羊傳</h1>
 							<ul class="nav nav-sidebar" style="width:100%px;height:550px;overflow-x:auto;overflow-y:auto;">
-							    <?php include('import/gongyang.php');?>
+							    <?php include('import/queryGongyang.php');?>
 							</ul>
 						</div>
-						
 						<div class="book col-sm-5 hidden">
 							<h1 class="page-header">穀梁傳</h1>
 							<ul class="nav nav-sidebar" style="width:100%px;height:550px;overflow-x:auto;overflow-y:auto;">
-							    <?php include('import/guliang.php');?>
+							    <?php include('import/queryGuliang.php');?>
 							</ul>
 						</div>
-						<!--
-						<div class="book col-sm-5 hidden">
-							<h1 class="page-header">春秋經解</h1>
-							<ul class="nav nav-sidebar" style="width:100%px;height:550px;overflow-x:auto;overflow-y:auto;">
-							</ul>
-						</div>
-						-->
+						
 					</div>
 				</div>
 			</div>
@@ -511,11 +459,11 @@ $( document ).ready(function() {
 					<div class="checkbox">
 	  					<label><input type="checkbox" value="穀梁傳">穀梁傳</label>
 					</div>
-					
+					<!--
 					<div class="checkbox">
 	  					<label><input type="checkbox" value="春秋經解">春秋經解</label>
 					</div>
-					
+					-->
 				</div>
 				<button onclick="show_page()">Submit</button>
 	        </div>		    
