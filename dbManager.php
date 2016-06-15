@@ -6,7 +6,7 @@
 		private $dbuser = 'test';
 		private $dbpass = 'lab303';
 		private $dbname = 'chunqiusys';
-		private $bookID_Name = array(1=>"chunqiu", 2=>"zuozhuan", 3=>"gongyang", 4=>"guliang");
+		private $bookID_Name = array(1=>"chunqiu", 2=>"zuozhuan", 3=>"gongyang", 4=>"guliang", 5=>"chunqiujingjie");
 		private $conn;
 		//constructor
 		function __construct() {

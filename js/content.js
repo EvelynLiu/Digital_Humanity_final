@@ -41,9 +41,10 @@ function show_page() {
     if (count === 0){ //only春秋
 		$( $('.book')[0] ).attr("class", "book col-sm-12 content");
 		
-    	$( $('.book')[1] ).attr("class", "hidden");
-		$( $('.book')[2] ).attr("class", "hidden");
-		$( $('.book')[3] ).attr("class", "hidden");
+    	$( $('.book')[1] ).attr("class", "book col-sm-3 hidden");
+		$( $('.book')[2] ).attr("class", "book col-sm-3 hidden");
+		$( $('.book')[3] ).attr("class", "book col-sm-3 hidden");
+		$( $('.book')[4] ).attr("class", "book col-sm-3 hidden");
     }
     else if (count === 1){ //col-sm-6 * 2 => checked[0]
 		$( $('.book')[0] ).attr("class", "book col-sm-6 content");
@@ -53,6 +54,7 @@ function show_page() {
 			
 			$( $('.book')[2] ).attr("class", "book col-sm-6 content hidden");
 			$( $('.book')[3] ).attr("class", "book col-sm-6 content hidden");
+			$( $('.book')[4] ).attr("class", "book col-sm-6 content hidden");
 		}
 				
 		else if (checked[0] == "公羊傳"){
@@ -60,12 +62,21 @@ function show_page() {
 			
 			$( $('.book')[1] ).attr("class", "book col-sm-6 content hidden");
 			$( $('.book')[3] ).attr("class", "book col-sm-6 content hidden");
+			$( $('.book')[4] ).attr("class", "book col-sm-6 content hidden");
 		}
 		else if (checked[0] == "穀梁傳") {
 			$( $('.book')[3] ).attr("class", "book col-sm-6 content");
 			
 			$( $('.book')[1] ).attr("class", "book col-sm-6 content hidden");
 			$( $('.book')[2] ).attr("class", "book col-sm-6 content hidden");
+			$( $('.book')[4] ).attr("class", "book col-sm-6 content hidden");
+		}
+		else if (checked[0] == "春秋經解") {
+			$( $('.book')[4] ).attr("class", "book col-sm-6 content");
+			
+			$( $('.book')[1] ).attr("class", "book col-sm-6 content hidden");
+			$( $('.book')[2] ).attr("class", "book col-sm-6 content hidden");
+			$( $('.book')[3] ).attr("class", "book col-sm-6 content hidden");
 		}
     }
     else if (count === 2){ //col-sm-4 * 3 => checked[0][1]
@@ -76,35 +87,81 @@ function show_page() {
 			$( $('.book')[2] ).attr("class", "book col-sm-4 content");
 			
 			$( $('.book')[3] ).attr("class", "book col-sm-4 content hidden");
+			$( $('.book')[4] ).attr("class", "book col-sm-4 content hidden");
 		} 
 		else if(checked[0] == "左傳" && checked[1] == "穀梁傳") {
 			$( $('.book')[1] ).attr("class", "book col-sm-4 content");
 			$( $('.book')[3] ).attr("class", "book col-sm-4 content");
 			
 			$( $('.book')[2] ).attr("class", "book col-sm-4 content hidden");
+			$( $('.book')[4] ).attr("class", "book col-sm-4 content hidden");
+		}
+		else if(checked[0] == "左傳" && checked[1] == "春秋經解") {
+			$( $('.book')[1] ).attr("class", "book col-sm-4 content");
+			$( $('.book')[4] ).attr("class", "book col-sm-4 content");
+			
+			$( $('.book')[2] ).attr("class", "book col-sm-4 content hidden");
+			$( $('.book')[3] ).attr("class", "book col-sm-4 content hidden");
 		}
 		else if(checked[0] == "公羊傳" && checked[1] == "穀梁傳") {
-			$( $('.book')[1] ).attr("class", "book col-sm-4 content hidden");
-			
 			$( $('.book')[2] ).attr("class", "book col-sm-4 content");
 			$( $('.book')[3] ).attr("class", "book col-sm-4 content");
+			
+			$( $('.book')[1] ).attr("class", "book col-sm-4 content hidden");
+			$( $('.book')[4] ).attr("class", "book col-sm-4 content hidden");
+		}
+		else if(checked[0] == "公羊傳" && checked[1] == "春秋經解") {
+			$( $('.book')[2] ).attr("class", "book col-sm-4 content");
+			$( $('.book')[4] ).attr("class", "book col-sm-4 content");
+			
+			$( $('.book')[1] ).attr("class", "book col-sm-4 content hidden");
+			$( $('.book')[3] ).attr("class", "book col-sm-4 content hidden");
+		}
+		else if(checked[0] == "穀梁傳" && checked[1] == "春秋經解") {
+			$( $('.book')[3] ).attr("class", "book col-sm-4 content");
+			$( $('.book')[4] ).attr("class", "book col-sm-4 content");
+			
+			$( $('.book')[1] ).attr("class", "book col-sm-4 content hidden");
+			$( $('.book')[2] ).attr("class", "book col-sm-4 content hidden");
 		}
     }
     else if (count === 3){ //col-sm-3 * 4 => checked[0][1][2]
     	$( $('.book')[0] ).attr("class", "book col-sm-3 content");
 		
-    	$( $('.book')[1] ).attr("class", "book col-sm-3 content");
-		$( $('.book')[2] ).attr("class", "book col-sm-3 content");
-		$( $('.book')[3] ).attr("class", "book col-sm-3 content");
+		if(checked[0] == "左傳" && checked[1] == "公羊傳" && checked[2] == "穀梁傳") {
+			$( $('.book')[1] ).attr("class", "book col-sm-3 content");
+			$( $('.book')[2] ).attr("class", "book col-sm-3 content");
+			$( $('.book')[3] ).attr("class", "book col-sm-3 content");
+			
+			$( $('.book')[4] ).attr("class", "book col-sm-3 content hidden");
+		} else if(checked[0] == "左傳" && checked[1] == "公羊傳" && checked[2] == "春秋經解") {
+			$( $('.book')[1] ).attr("class", "book col-sm-3 content");
+			$( $('.book')[2] ).attr("class", "book col-sm-3 content");
+			$( $('.book')[4] ).attr("class", "book col-sm-3 content");
+			
+			$( $('.book')[3] ).attr("class", "book col-sm-3 content hidden");
+		}else if(checked[0] == "左傳" && checked[1] == "穀梁傳" && checked[2] == "春秋經解") {
+			$( $('.book')[1] ).attr("class", "book col-sm-3 content");
+			$( $('.book')[3] ).attr("class", "book col-sm-3 content");
+			$( $('.book')[4] ).attr("class", "book col-sm-3 content");
+			
+			$( $('.book')[2] ).attr("class", "book col-sm-3 content hidden");
+		}else if(checked[0] == "公羊傳" && checked[1] == "穀梁傳" && checked[2] == "春秋經解") {
+			$( $('.book')[2] ).attr("class", "book col-sm-3 content");
+			$( $('.book')[3] ).attr("class", "book col-sm-3 content");
+			$( $('.book')[4] ).attr("class", "book col-sm-3 content");
+			
+			$( $('.book')[1] ).attr("class", "book col-sm-3 content hidden");
+		}
+    	
     }
-	/*
-    else if (count === 4){ //col-sm-2 * 5 => checked[0][1][2]
-    	$( $('.book')[0] ).attr("class", "book col-sm-3 content");
-		
-    	$( $('.book')[1] ).attr("class", "book col-sm-3 content");
-		$( $('.book')[2] ).attr("class", "book col-sm-3 content");
-		$( $('.book')[3] ).attr("class", "book col-sm-3 content");
-    }*/
+	else if (count === 4){ //col-sm-3 * 4 => checked[0][1][2]
+		$( $('.book')[0] ).attr("class", "book col-sm-3 content");
+		$( $('.book')[1] ).attr("class", "book col-sm-2 content");
+		$( $('.book')[2] ).attr("class", "book col-sm-2 content");
+		$( $('.book')[3] ).attr("class", "book col-sm-2 content");
+		$( $('.book')[4] ).attr("class", "book col-sm-3 content");
+	}
 }
 
 

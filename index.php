@@ -57,6 +57,10 @@ $( document ).ready(function() {
 					scrollTop:  $( $(".nav-sidebar")[3] ).scrollTop() + ( $( $('.' + this.hash.replace("#", ""))[3] ).offset().top - window_gap )
 				}, 600);
 				
+				$($(".nav-sidebar")[4]).animate({
+					scrollTop:  $( $(".nav-sidebar")[4] ).scrollTop() + ( $( $('.' + this.hash.replace("#", ""))[4] ).offset().top - window_gap )
+				}, 600);
+				
 				
 			});
 		}
@@ -80,7 +84,7 @@ $( document ).ready(function() {
 					
 					try {
 						$($(".nav-sidebar")[1]).animate({
-							scrollTop:  $( $(".nav-sidebar")[1] ).scrollTop() + ( $( $('.' + this.hash.replace("# ", "").split(" ")[0]     )[1] ).offset().top - window_gap )
+							scrollTop:  $( $(".nav-sidebar")[1] ).scrollTop() + ( $( $( $('.' + this.hash.replace("# ", "").split(" ")[0]     )[1] )[0] ).offset().top - window_gap )
 						}, 600);
 					}catch(err) {
 						console.log("1 : " + err);
@@ -88,7 +92,7 @@ $( document ).ready(function() {
 					
 					try {
 						$($(".nav-sidebar")[2]).animate({
-							scrollTop:  $( $(".nav-sidebar")[2] ).scrollTop() + ( $( $('.' + this.hash.replace("# ", "").split(" ")[0]     )[2] ).offset().top - window_gap )
+							scrollTop:  $( $(".nav-sidebar")[2] ).scrollTop() + ( $( $( $('.' + this.hash.replace("# ", "").split(" ")[0]     )[2] )[0] ).offset().top - window_gap )
 						}, 600);
 					}catch(err) {
 						
@@ -96,7 +100,15 @@ $( document ).ready(function() {
 					
 					try {
 						$($(".nav-sidebar")[3]).animate({
-							scrollTop:  $( $(".nav-sidebar")[3] ).scrollTop() + ( $( $('.' + this.hash.replace("# ", "").split(" ")[0]     )[3] ).offset().top - window_gap )
+							scrollTop:  $( $(".nav-sidebar")[3] ).scrollTop() + ( $( $( $('.' + this.hash.replace("# ", "").split(" ")[0]     )[3] )[0] ).offset().top - window_gap )
+						}, 600);
+					}catch(err) {
+						
+					}
+					
+					try {
+						$($(".nav-sidebar")[4]).animate({
+							scrollTop:  $( $(".nav-sidebar")[4] ).scrollTop() + ( $( $( $('.' + this.hash.replace("# ", "").split(" ")[0]     )[4] )[0] ).offset().top - window_gap )
 						}, 600);
 					}catch(err) {
 						
@@ -462,38 +474,39 @@ $( document ).ready(function() {
 					<div class="row">
 					    <div class="book col-sm-12 content">
 							<h1 class="page-header">春秋</h1>
-							<ul class="nav nav-sidebar" style="width:100%px;height:550px;overflow-x:auto;overflow-y:auto;">
+							<ul class="nav nav-sidebar" style="width:100%px;height:580px;overflow-x:auto;overflow-y:auto;">
 							    <?php include('import/chunqiu.php');?>
 							</ul>
 						</div>
 						
 						<div class="book col-sm-5 content hidden">
 							<h1 class="page-header">左傳</h1>
-							<ul class="nav nav-sidebar" style="width:100%px;height:550px;overflow-x:auto;overflow-y:auto;">
+							<ul class="nav nav-sidebar" style="width:100%px;height:580px;overflow-x:auto;overflow-y:auto;">
 							    <?php include('import/zuozhuan.php');?>
 							</ul>
 						</div>
 						
 						<div class="book col-sm-5 content hidden">
 							<h1 class="page-header">公羊傳</h1>
-							<ul class="nav nav-sidebar" style="width:100%px;height:550px;overflow-x:auto;overflow-y:auto;">
+							<ul class="nav nav-sidebar" style="width:100%px;height:580px;overflow-x:auto;overflow-y:auto;">
 							    <?php include('import/gongyang.php');?>
 							</ul>
 						</div>
 						
 						<div class="book col-sm-5 hidden">
 							<h1 class="page-header">穀梁傳</h1>
-							<ul class="nav nav-sidebar" style="width:100%px;height:550px;overflow-x:auto;overflow-y:auto;">
+							<ul class="nav nav-sidebar" style="width:100%px;height:580px;overflow-x:auto;overflow-y:auto;">
 							    <?php include('import/guliang.php');?>
 							</ul>
 						</div>
-						<!--
+						
 						<div class="book col-sm-5 hidden">
 							<h1 class="page-header">春秋經解</h1>
-							<ul class="nav nav-sidebar" style="width:100%px;height:550px;overflow-x:auto;overflow-y:auto;">
+							<ul class="nav nav-sidebar" style="width:100%px;height:580px;overflow-x:auto;overflow-y:auto;">
+								<?php include('import/chunqiugin.php');?>
 							</ul>
 						</div>
-						-->
+						
 					</div>
 				</div>
 			</div>

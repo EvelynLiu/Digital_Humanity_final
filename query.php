@@ -61,11 +61,62 @@ $( document ).ready(function() {
 					scrollTop:  $( $(".nav-sidebar")[3] ).scrollTop() + ( $( $('.' + this.hash.replace("#", ""))[3] ).offset().top - window_gap )
 				}, 600);
 				
-				
+				$($(".nav-sidebar")[4]).animate({
+					scrollTop:  $( $(".nav-sidebar")[4] ).scrollTop() + ( $( $('.' + this.hash.replace("#", ""))[4] ).offset().top - window_gap )
+				}, 600);
 			});
 		}
 	}
+		
+	for(var i = 0; i < $('.nav-sidebar').length; i ++) {
+		for(var j = 1; j < $('.nav-sidebar')[i].childNodes.length; j ++) {
+			for(var k = 1; k < $('.nav-sidebar')[i].childNodes[j].childNodes.length - 1; k ++) {
 				
+				$( $('.nav-sidebar')[i].childNodes[j].childNodes[k].firstElementChild ).click(function() {
+					
+					try {
+						$($(".nav-sidebar")[0]).animate({
+							scrollTop: $( $(".nav-sidebar")[0] ).scrollTop() + ( $( $( $('.' + this.hash.replace("# ", "").split(" ")[0]     )[0] )[0] ).offset().top - window_gap )
+						}, 600);
+					}catch(err) {
+						console.log("0 : " + err);
+					}
+					
+					try {
+						$($(".nav-sidebar")[1]).animate({
+							scrollTop:  $( $(".nav-sidebar")[1] ).scrollTop() + ( $( $( $('.' + this.hash.replace("# ", "").split(" ")[0]     )[1] )[0] ).offset().top - window_gap )
+						}, 600);
+					}catch(err) {
+						console.log("1 : " + err);
+					}
+					
+					try {
+						$($(".nav-sidebar")[2]).animate({
+							scrollTop:  $( $(".nav-sidebar")[2] ).scrollTop() + ( $( $( $('.' + this.hash.replace("# ", "").split(" ")[0]     )[2] )[0] ).offset().top - window_gap )
+						}, 600);
+					}catch(err) {
+						
+					}
+					
+					try {
+						$($(".nav-sidebar")[3]).animate({
+							scrollTop:  $( $(".nav-sidebar")[3] ).scrollTop() + ( $( $( $('.' + this.hash.replace("# ", "").split(" ")[0]     )[3] )[0] ).offset().top - window_gap )
+						}, 600);
+					}catch(err) {
+						
+					}
+					
+					try {
+						$($(".nav-sidebar")[4]).animate({
+							scrollTop:  $( $(".nav-sidebar")[4] ).scrollTop() + ( $( $( $('.' + this.hash.replace("# ", "").split(" ")[0]     )[4] )[0] ).offset().top - window_gap )
+						}, 600);
+					}catch(err) {
+						
+					}
+				});
+			}
+		}
+	}		
 				
 	});
 </script>
@@ -435,10 +486,18 @@ $( document ).ready(function() {
 							    <?php include('import/queryGongyang.php');?>
 							</ul>
 						</div>
+						
 						<div class="book col-sm-5 hidden">
 							<h1 class="page-header">穀梁傳</h1>
 							<ul class="nav nav-sidebar" style="width:100%px;height:550px;overflow-x:auto;overflow-y:auto;">
 							    <?php include('import/queryGuliang.php');?>
+							</ul>
+						</div>
+						
+						<div class="book col-sm-5 hidden">
+							<h1 class="page-header">春秋經解</h1>
+							<ul class="nav nav-sidebar" style="width:100%px;height:580px;overflow-x:auto;overflow-y:auto;">
+								<?php include('import/chunqiugin.php');?>
 							</ul>
 						</div>
 						
@@ -459,11 +518,11 @@ $( document ).ready(function() {
 					<div class="checkbox">
 	  					<label><input type="checkbox" value="穀梁傳">穀梁傳</label>
 					</div>
-					<!--
+					
 					<div class="checkbox">
 	  					<label><input type="checkbox" value="春秋經解">春秋經解</label>
 					</div>
-					-->
+					
 				</div>
 				<button onclick="show_page()">Submit</button>
 	        </div>		    
